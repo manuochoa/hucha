@@ -11,6 +11,7 @@ const App = (props) => {
         <div className='main'>
           <Routes>
             <Route exact path="/" element={<HomeContainer/>}/>
+            <Route path='*' element={<Navigate to="/"/>}/>
           </Routes>
         </div>
       </HttpsRedirect>
