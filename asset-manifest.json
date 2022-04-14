@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hucha/static/css/main.ec0e3f53.css",
-    "main.js": "/hucha/static/js/main.173658a4.js",
+    "main.js": "/hucha/static/js/main.00ea9827.js",
     "static/js/787.938fa395.chunk.js": "/hucha/static/js/787.938fa395.chunk.js",
     "static/media/Cherish_Moment_TTF.otf": "/hucha/static/media/Cherish_Moment_TTF.7db6a29a1e6503996d28.otf",
     "static/media/sticker.svg": "/hucha/static/media/sticker.449f275cc3b833cf4d1c98d7d04f0c5d.svg",
@@ -12,11 +12,11 @@
     "index.html": "/hucha/index.html",
     "static/media/arrow.svg": "/hucha/static/media/arrow.718722591642e50276ed67b3f18af5a8.svg",
     "main.ec0e3f53.css.map": "/hucha/static/css/main.ec0e3f53.css.map",
-    "main.173658a4.js.map": "/hucha/static/js/main.173658a4.js.map",
+    "main.00ea9827.js.map": "/hucha/static/js/main.00ea9827.js.map",
     "787.938fa395.chunk.js.map": "/hucha/static/js/787.938fa395.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ec0e3f53.css",
-    "static/js/main.173658a4.js"
+    "static/js/main.00ea9827.js"
   ]
 }
