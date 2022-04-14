@@ -1,0 +1,36 @@
+.main {
+    width: 100%;
+    background-color: white;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    position: fixed;
+}
+.item {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #A6A7B4 !important;
+    text-transform: initial !important;
+    gap: 6px;
+    height: 68px;
+    font-family: 'Milky Nice', sans-serif !important;
+}
+.item svg {
+    transform: scale(1.2);
+}
+.item p {
+    color: #A6A7B4;
+    font-size: 14px;
+    transition-duration: .3s;
+}
+.active {
+    color: #ECA19F !important;
+}
+.active p {
+    color: black !important;
+}

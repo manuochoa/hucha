@@ -1,0 +1,16 @@
+.main {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.main button {
+    width: fit-content;
+    padding: 14px 29px;
+}
+

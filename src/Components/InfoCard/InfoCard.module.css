@@ -1,0 +1,118 @@
+.main {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    box-sizing: border-box;
+    color: black;
+    width: 25%;
+    text-align: center;
+}
+.iconContainer {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.value {
+    margin-top: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.percent {
+    margin-top: 14px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    font-size: 12px;
+    justify-content: center;
+}
+.text {
+    font-size: 12px;
+    margin-top: 14px;
+}
+
+.available {
+    background: linear-gradient(180deg, #BAA3E5 0%, #9088E3 100%);
+    box-shadow: 0 8px 0px 0px #7B72DF;
+}
+.available .iconContainer {
+    background: #805DDF;
+}
+
+.deposits {
+    background: linear-gradient(180deg, #A7D9C2 0%, #97BEC6 100%);
+    box-shadow: 0 8px 0px 0px #769FAC;
+}
+.deposits .iconContainer {
+    background: #7DB8B3;
+}
+
+.claimed {
+    background: linear-gradient(180deg, #EFCDA0 0%, #ECB9A0 100%);
+    box-shadow: 0 8px 0px 0px #C79574;
+}
+.claimed .iconContainer {
+    background: #E49C6A;
+}
+
+.payout {
+    background: linear-gradient(180deg, #D0DFFB 0%, #87ABF9 100%);
+    box-shadow: 0 8px 0px 0px #397EE3;
+}
+.payout .iconContainer {
+    background: #91ADEF;
+}
+
+@media screen and (max-width: 1170px) {
+    .text {
+        font-size: 20px;
+    }
+    .percent {
+        font-size: 20px;
+    }
+    .value {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 468px) {
+    .text {
+        font-size: 12px;
+    }
+    .percent {
+        font-size: 12px;
+    }
+    .value {
+        font-size: 16px;
+    }
+    .iconContainer {
+        width: 40px;
+        height: 40px;
+    }
+    .iconContainer img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .main {
+        padding: 8px;
+    }
+    .text {
+        font-size: 10px;
+    }
+    .percent {
+        font-size: 10px;
+    }
+    .value {
+        font-size: 14px;
+    }
+}

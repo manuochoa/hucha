@@ -1,0 +1,63 @@
+.main {
+    width: 100%;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.logo {
+    margin-bottom: 48px;
+}
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 48px;
+}
+.field {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+.field span {
+    font-size: 16px;
+    color: black;
+}
+.fieldValue {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+}
+.value {
+    color: #ECA19F;
+}
+.dop {
+    font-size: 16px;
+    color: black;
+}
+.exit {
+    margin-top: auto !important;
+    background-color: transparent !important;
+    color: black !important;
+    font-size: 16px !important;
+    text-transform: initial !important;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Milky Nice', sans-serif !important;
+    width: fit-content;
+}
+
+@media screen and (max-width: 1280px) {
+    .field span, .fieldValue, .dop {
+        font-size: 14px;
+    }
+}

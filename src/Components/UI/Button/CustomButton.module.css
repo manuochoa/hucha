@@ -1,0 +1,32 @@
+.main {
+    border-radius: 100px !important;
+    font-family: 'Milky Nice', sans-serif !important;
+    font-size: 16px !important;
+    height: 56px;
+    width: 100%;
+    text-transform: initial !important;
+}
+.primary {
+    background-color: #ECA19F !important;
+    color: white !important;   
+}
+.primary:hover {
+    background-color: #e29693 !important;
+}
+.primary:disabled {
+    background-color: rgba(128, 128, 128, .4) !important;
+}
+.secondary {
+    background-color: #FFFFFF !important;
+    color: black !important;
+}
+.secondary:hover {
+    background-color: #f3dede !important;
+}
+
+@media screen and (max-width: 468px) {
+    .main {
+        font-size: 14px !important;
+        height: 48px;
+    }
+}

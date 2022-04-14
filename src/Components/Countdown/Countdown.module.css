@@ -1,0 +1,105 @@
+.main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    color: black;
+}
+.main label {
+    color: black;
+    font-size: 40px;
+    position: relative;
+    top: -14px;
+    animation: fade 1s step-start infinite;
+}
+.numbers {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 36px;
+}
+.number {
+    width: 72px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%);
+    border: 1px solid #F1F2F6;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 6px 0 0 #F1F2F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.block span {
+    font-size: 16px;
+}
+
+@keyframes fade {
+    50% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .numbers {
+        font-size: 28px;
+    }
+    .number {
+        padding: 14px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .number {
+        width: 62px;
+    }
+    .numbers {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .number {
+        width: 48px;
+        padding: 12px;
+    }
+    .numbers {
+        font-size: 20px;
+    }
+} 
+
+@media screen and (max-width: 468px) {
+    .block span {
+        font-size: 12px;
+    }
+    .main label {
+        font-size: 24px;
+    }
+    .number {
+        width: 32px;
+        height: 42px;
+        padding: 0;
+    }
+    .numbers {
+        font-size: 24px;
+        gap: 4px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .number {
+        width: 28px;
+        height: 35px;
+    }
+    .numbers {
+        font-size: 20px;
+    }
+}
+

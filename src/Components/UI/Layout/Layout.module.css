@@ -1,0 +1,39 @@
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+.sidebar {
+    width: 24%;
+}
+.content {
+    width: 76%;
+    padding: 24px 10%;
+    box-sizing: border-box;
+    background: radial-gradient(50% 50% at 50% 50%, #F2C1CA 0%, #ED9FB3 100%);
+}
+
+@media screen and (max-width: 1366px) {
+    .content {
+        padding: 24px 6%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .content {
+        max-height: 100vh;
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .sidebar {
+        display: none;
+    }
+    .content {
+        width: 100%;
+        padding: 0px;
+    }
+}
+
