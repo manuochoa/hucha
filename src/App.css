@@ -5,3 +5,8 @@
   font-family: Cherish Moment;
   src: url('./Assets/Fonts/Cherish_Moment_TTF.otf');
 }
+
+@font-face {
+  font-family: Milky Nice;
+  src: url('./Assets/Fonts/MilkyNice-Clean.otf');
+}
