@@ -45,3 +45,13 @@
         padding: 0 20px;
     }
 } 
+
+@media screen and (max-width: 350px) {
+    .mobile {
+        padding-top: 74px;
+    }
+    .content {
+        padding: 0 10px;
+        height: calc(100vh - 142px);
+    }
+}

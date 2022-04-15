@@ -14,3 +14,8 @@
     padding: 14px 29px;
 }
 
+@media screen and (max-width: 350px) {
+    .main {
+        padding: 10px;
+    }
+}
