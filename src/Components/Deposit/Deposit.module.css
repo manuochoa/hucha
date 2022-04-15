@@ -34,7 +34,7 @@
 
 @media screen and (max-width: 568px) {
     .main {
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
         justify-content: flex-start;
         flex-grow: initial;
         padding-bottom: 50px;
@@ -54,7 +54,7 @@
     }
     
     .main h2 {
-        margin-top: 0px;
+        margin-top: 12px;
         font-size: 26px;
     }
 }
