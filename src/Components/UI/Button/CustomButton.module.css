@@ -30,3 +30,10 @@
         height: 48px;
     }
 }
+
+@media screen and (max-width: 375px) {
+    .main {
+        font-size: 12px !important;
+        height: 40px;
+    }
+}
