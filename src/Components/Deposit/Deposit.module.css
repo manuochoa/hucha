@@ -29,12 +29,14 @@
     .main {
         flex-grow: 1;
         justify-content: space-evenly;
+        max-height: calc(100vh - 142px);
+        overflow-y: scroll;
     }
 }
 
 @media screen and (max-width: 568px) {
     .main {
-        /* overflow-y: scroll; */
+        overflow-y: scroll;
         justify-content: flex-start;
         flex-grow: initial;
         padding-bottom: 50px;
@@ -45,6 +47,9 @@
     .actions button {
         width: calc(50% - 9px);
     }
+    .main h2 {
+        margin-top: 0;
+    }
 }
 
 
@@ -54,7 +59,7 @@
     }
     
     .main h2 {
-        margin-top: 12px;
+        margin-top: 0px;
         font-size: 26px;
     }
 }
