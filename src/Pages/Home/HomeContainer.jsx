@@ -3,12 +3,19 @@ import Home from './Home'
 
 const HomeContainer = (props) => {
     const [currentTab, setCurrentTab] = useState(0)
+    const [isOpenConnectWallet, setIsOpenConnectWallet] = useState(false)
+
+    const handleWallet = () => {
+        setIsOpenConnectWallet(!isOpenConnectWallet)
+    }
 
     return (
         <>
             <Home
                 currentTab={currentTab}
                 setCurrentTab={setCurrentTab}
+                isOpenConnectWallet={isOpenConnectWallet}
+                handleWallet={handleWallet}
             />
         </>
     )

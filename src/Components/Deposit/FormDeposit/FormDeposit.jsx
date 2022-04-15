@@ -49,17 +49,26 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const FormDeposit = (props) => {
-    const { balance = 0 } = props
+    const { balance = 1000 } = props
 
     const [deposit, setDeposit] = useState(500)
     const [address, setAddress] = useState("")
 
     const handleDeposit = (e) => {
-        setDeposit(e.target.value)
+        const number = Number(e.target.value.replace(/[^0-9]/g, ''))
+        if(number <= balance) {
+            setDeposit(number)
+        }else {
+            setDeposit(balance)
+        }
     }
 
     const handleAddress = (e) => {
         setAddress(e.target.value)
+    }
+
+    const setMax = () => {
+        setDeposit(balance)
     }
 
     const material = useStyles()
@@ -81,7 +90,7 @@ const FormDeposit = (props) => {
                         InputProps={{
                             endAdornment: (
                                 <InputAdornment position='end' style={{ width: "fit-content", marginRight: "0" }}>
-                                    <Button className={classes.maxBut}>MAX</Button>
+                                    <Button onClick={setMax} className={classes.maxBut}>MAX</Button>
                                 </InputAdornment>
                             )
                         }}
