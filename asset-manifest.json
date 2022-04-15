@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hucha/static/css/main.ed41b7d7.css",
+    "main.css": "/hucha/static/css/main.ae285df1.css",
     "main.js": "/hucha/static/js/main.cdfb9eda.js",
     "static/js/787.938fa395.chunk.js": "/hucha/static/js/787.938fa395.chunk.js",
     "static/media/MilkyNice-Clean.otf": "/hucha/static/media/MilkyNice-Clean.f6fbbb8daccb6aeb216d.otf",
@@ -13,12 +13,12 @@
     "static/media/logout.svg": "/hucha/static/media/logout.fb4d49310ba8da88038ec915853dbc98.svg",
     "index.html": "/hucha/index.html",
     "static/media/arrow.svg": "/hucha/static/media/arrow.718722591642e50276ed67b3f18af5a8.svg",
-    "main.ed41b7d7.css.map": "/hucha/static/css/main.ed41b7d7.css.map",
+    "main.ae285df1.css.map": "/hucha/static/css/main.ae285df1.css.map",
     "main.cdfb9eda.js.map": "/hucha/static/js/main.cdfb9eda.js.map",
     "787.938fa395.chunk.js.map": "/hucha/static/js/787.938fa395.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed41b7d7.css",
+    "static/css/main.ae285df1.css",
     "static/js/main.cdfb9eda.js"
   ]
 }
