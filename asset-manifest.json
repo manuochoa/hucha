@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/hucha/static/css/main.5d3a8354.css",
-    "main.js": "/hucha/static/js/main.00ea9827.js",
+    "main.css": "/hucha/static/css/main.ed41b7d7.css",
+    "main.js": "/hucha/static/js/main.cdfb9eda.js",
     "static/js/787.938fa395.chunk.js": "/hucha/static/js/787.938fa395.chunk.js",
     "static/media/MilkyNice-Clean.otf": "/hucha/static/media/MilkyNice-Clean.f6fbbb8daccb6aeb216d.otf",
     "static/media/Cherish_Moment_TTF.otf": "/hucha/static/media/Cherish_Moment_TTF.7db6a29a1e6503996d28.otf",
+    "static/media/logo_small.svg": "/hucha/static/media/logo_small.efd3849beb2c22ccc41811b1a5548d81.svg",
     "static/media/sticker.svg": "/hucha/static/media/sticker.449f275cc3b833cf4d1c98d7d04f0c5d.svg",
     "static/media/dollar.svg": "/hucha/static/media/dollar.5082d646aa9ce70e7b5f4d4b7a3e3a68.svg",
     "static/media/rocket.svg": "/hucha/static/media/rocket.f659c2fe65d5dc2b7f1a208c42d2d457.svg",
@@ -12,12 +13,12 @@
     "static/media/logout.svg": "/hucha/static/media/logout.fb4d49310ba8da88038ec915853dbc98.svg",
     "index.html": "/hucha/index.html",
     "static/media/arrow.svg": "/hucha/static/media/arrow.718722591642e50276ed67b3f18af5a8.svg",
-    "main.5d3a8354.css.map": "/hucha/static/css/main.5d3a8354.css.map",
-    "main.00ea9827.js.map": "/hucha/static/js/main.00ea9827.js.map",
+    "main.ed41b7d7.css.map": "/hucha/static/css/main.ed41b7d7.css.map",
+    "main.cdfb9eda.js.map": "/hucha/static/js/main.cdfb9eda.js.map",
     "787.938fa395.chunk.js.map": "/hucha/static/js/787.938fa395.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d3a8354.css",
-    "static/js/main.00ea9827.js"
+    "static/css/main.ed41b7d7.css",
+    "static/js/main.cdfb9eda.js"
   ]
 }
