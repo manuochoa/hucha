@@ -9,7 +9,7 @@ import { initAction } from "../../Redux/reduxActions";
 const Deposit = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
-  let { user } = useSelector((state) => state.common);
+  let { user, contract } = useSelector((state) => state.common);
 
   const handleClick = async (type) => {
     setIsLoading(true);
@@ -21,8 +21,22 @@ const Deposit = (props) => {
   };
   return (
     <div className={classes.main}>
-      <h2>Time till Withdrawal</h2>
-      <Countdown date={new Date(user.unlockTime ? user.unlockTime : 0)} />
+      {contract.unlockDate > contract.lockDate ? (
+        <>
+          <h2>Withdrawal closes in:</h2>
+          <Countdown
+            date={new Date(contract.lockDate ? contract.lockDate : 0)}
+          />
+        </>
+      ) : (
+        <>
+          <h2>Time till Withdrawal:</h2>
+          <Countdown
+            date={new Date(contract.unlockDate ? contract.unlockDate : 0)}
+          />
+        </>
+      )}
+
       <div className={classes.actions}>
         <CustomButton
           onClick={() => handleClick("CLAIM")}

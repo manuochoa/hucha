@@ -106,6 +106,18 @@ const FormDeposit = (props) => {
     setIsLoading(false);
   };
 
+  const canWithdraw = () => {
+    let { unlockDate, lockDate } = contract;
+
+    if (unlockDate < lockDate) {
+      return Date.now() > unlockDate && Date.now() < lockDate;
+    } else if (unlockDate > lockDate) {
+      return Date.now() < lockDate;
+    } else {
+      return false;
+    }
+  };
+
   useEffect(() => {
     if (user.myReferral !== "0x0000000000000000000000000000000000000000") {
       setAddress(user.myReferral);
@@ -180,7 +192,7 @@ const FormDeposit = (props) => {
           !address ||
           isLoading ||
           Number(user.deposits) === 0 ||
-          user.unlockTime > Date.now()
+          !canWithdraw()
         }
       />
     </Card>

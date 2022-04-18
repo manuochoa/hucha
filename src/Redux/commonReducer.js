@@ -18,6 +18,8 @@ let initialState = {
   contract: {
     totalDeposited: "",
     totalUsers: "",
+    unlockDate: "",
+    lockDate: "",
   },
 };
 
@@ -42,6 +44,8 @@ let commonReducer = (state = initialState, action) => {
         contract: {
           totalDeposited: action.payload.totalDeposited,
           totalUsers: action.payload.totalUsers,
+          unlockDate: action.payload.unlockDate,
+          lockDate: action.payload.lockDate,
         },
       };
     case "UPDATE_USER_INFO":

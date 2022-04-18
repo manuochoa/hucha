@@ -502,7 +502,22 @@ export const faucetABI = [
       },
       {
         internalType: "uint256",
-        name: "_total_airdrops",
+        name: "_unlock_date",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "_lock_date",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "_unlock_period",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "_lock_period",
         type: "uint256",
       },
     ],
@@ -677,11 +692,6 @@ export const faucetABI = [
           {
             internalType: "uint256",
             name: "deposit_time",
-            type: "uint256",
-          },
-          {
-            internalType: "uint256",
-            name: "unlock_time",
             type: "uint256",
           },
           {
@@ -1120,10 +1130,22 @@ export const faucetABI = [
     inputs: [
       {
         internalType: "uint256",
-        name: "_newLock_time",
+        name: "_newUnlock_period",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "_newLock_period",
         type: "uint256",
       },
     ],
+    name: "updateLockPeriods",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
     name: "updateLockTime",
     outputs: [],
     stateMutability: "nonpayable",
@@ -1221,11 +1243,6 @@ export const faucetABI = [
         name: "match_bonus",
         type: "uint256",
       },
-      {
-        internalType: "uint256",
-        name: "unlock_time",
-        type: "uint256",
-      },
     ],
     stateMutability: "view",
     type: "function",
@@ -1317,11 +1334,6 @@ export const faucetABI = [
       {
         internalType: "uint256",
         name: "deposit_time",
-        type: "uint256",
-      },
-      {
-        internalType: "uint256",
-        name: "unlock_time",
         type: "uint256",
       },
       {
