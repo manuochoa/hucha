@@ -1,35 +1,53 @@
-import React from 'react'
-import classes from './Sidebar.module.css'
-import CustomButton from '../Button/CustomButton'
-import { Button } from '@mui/material'
+import React, { useState } from "react";
+import classes from "./Sidebar.module.css";
+import CustomButton from "../Button/CustomButton";
+import { Button } from "@mui/material";
 
-import logo from '../../../Assets/logo.png'
-import exit_icon from '../../../Assets/Icons/logout.svg'
-import Referals from '../../Referals/Referals'
+import logo from "../../../Assets/logo.png";
+import exit_icon from "../../../Assets/Icons/logout.svg";
+import Referals from "../../Referals/Referals";
+import { useDispatch, useSelector } from "react-redux";
+import { disconnectWallet } from "../../../Redux/reduxActions";
 
 const Sidebar = (props) => {
-    const { handleWallet } = props
+  const { handleWallet } = props;
+  const dispatch = useDispatch();
+  let { userAddress, connectionType } = useSelector((state) => state.common);
+  const info = {
+    referal_rewards: 0,
+    team: 112,
+    my_referal: "",
+    marketing_wallet: "0x153B202F6C6e570f13C27371CdA6Ae2c8768Dca6",
+    total_deposited: 32120800,
+    total_users: 11000,
+  };
 
-    const info = {
-        referal_rewards: 0,
-        team: 112,
-        my_referal: "",
-        marketing_wallet: "0x7c8d1fsls23fjdfsajd23sda21",
-        total_deposited: 32120800,
-        total_users: 11000
-    }
+  return (
+    <div className={classes.main}>
+      <img src={logo} alt="logo" className={classes.logo} />
+      <CustomButton
+        onClick={
+          userAddress ? () => dispatch(disconnectWallet()) : handleWallet
+        }
+        text={
+          userAddress
+            ? `${userAddress.slice(0, 6)}...${userAddress.slice(-6)}`
+            : "Connect Wallet"
+        }
+        variant="primary"
+      />
+      <Referals info={info} />
+      {userAddress && (
+        <Button
+          onClick={() => dispatch(disconnectWallet())}
+          className={classes.exit}
+        >
+          <img src={exit_icon} alt="exit_icon" />
+          <p>Log Out</p>
+        </Button>
+      )}
+    </div>
+  );
+};
 
-    return (
-        <div className={classes.main}>
-            <img src={logo} alt="logo" className={classes.logo}/>
-            <CustomButton onClick={handleWallet} text="Connect Wallet" variant="primary"/>
-            <Referals info={info}/>
-            <Button className={classes.exit}>
-                <img src={exit_icon} alt="exit_icon"/>
-                <p>Log Out</p>
-            </Button>
-        </div>
-    )
-}
-
-export default Sidebar
+export default Sidebar;

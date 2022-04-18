@@ -1,56 +1,68 @@
 .info {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    margin-top: 48px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 48px;
 }
 .field {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 16px;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .field span {
-    font-size: 16px;
-    color: black;
+  font-size: 16px;
+  color: black;
+}
+.marketing:hover {
+  cursor: pointer;
+  color: red;
+}
+.marketing {
+  font-size: 16px;
+  color: #eca19f;
 }
 .fieldValue {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
 }
 .value {
-    color: #ECA19F;
+  color: #eca19f;
 }
 .dop {
-    font-size: 16px;
-    color: black;
+  font-size: 16px;
+  color: black;
 }
 
 @media screen and (max-width: 1280px) {
-    .field span, .fieldValue, .dop {
-        font-size: 14px;
-    }
+  .field span,
+  .fieldValue,
+  .dop {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 468px) {
-    .info {
-        margin-top: 0;
-    }
+  .info {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 350px) {
-    .info {
-        gap: 24px;
-    }
-    .field span, .fieldValue, .dop {
-        font-size: 12px;
-    }
-    .field {
-        padding-bottom: 12px;
-    }
+  .info {
+    gap: 24px;
+  }
+  .field span,
+  .fieldValue,
+  .dop {
+    font-size: 12px;
+  }
+  .field {
+    padding-bottom: 12px;
+  }
 }
