@@ -178,6 +178,7 @@ export const initAction = (type, ref, _amount) => {
       let receipt = await tx.wait();
 
       dispatch(getUserInfo());
+      dispatch(getContractInfo());
 
       return receipt;
     } catch (error) {
