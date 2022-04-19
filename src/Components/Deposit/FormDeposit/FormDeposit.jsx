@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: "400",
       padding: "0 24px",
       "@media screen and (max-width: 468px)": {
-        fontSize: "14px",
+        fontSize: "16px",
       },
     },
     "& input::placeholder": {
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: 8,
       height: "60px",
       fontFamily: "Open Sans",
-      fontSize: "14px",
+      fontSize: "16px",
       "@media screen and (max-width: 468px)": {
         height: "48px",
       },
