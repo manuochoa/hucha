@@ -50,10 +50,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const FormDeposit = (props) => {
+const FormDeposit = ({ canWithdraw }) => {
   const dispatch = useDispatch();
   let { user, contract } = useSelector((state) => state.common);
-  const { balance = 1000 } = props;
   const [deposit, setDeposit] = useState(0);
   const [address, setAddress] = useState(
     user.myReferral !== "0x0000000000000000000000000000000000000000"
@@ -107,22 +106,12 @@ const FormDeposit = (props) => {
     setIsLoading(false);
   };
 
-  const canWithdraw = () => {
-    let { unlockDate, lockDate } = contract;
-
-    if (unlockDate < lockDate) {
-      return Date.now() > unlockDate && Date.now() < lockDate;
-    } else if (unlockDate > lockDate) {
-      return Date.now() < lockDate;
-    } else {
-      return false;
-    }
-  };
-
   useEffect(() => {
     if (user.myReferral !== "0x0000000000000000000000000000000000000000") {
       setAddress(user.myReferral);
     }
+
+    console.log(canWithdraw(), "canWithdraw");
   }, [user]);
 
   const material = useStyles();
@@ -188,13 +177,7 @@ const FormDeposit = (props) => {
         text="Withdraw"
         variant="primary"
         onClick={() => handleClick("WITHDRAW")}
-        disabled={
-          !deposit ||
-          !address ||
-          isLoading ||
-          Number(user.deposits) === 0 ||
-          !canWithdraw()
-        }
+        disabled={isLoading || Number(user.deposits) === 0 || !canWithdraw()}
       />
     </Card>
   );

@@ -19,9 +19,21 @@ const Deposit = (props) => {
     }
     setIsLoading(false);
   };
+
+  const canWithdraw = () => {
+    let { unlockDate, lockDate } = contract;
+
+    if (unlockDate < lockDate) {
+      return Date.now() > unlockDate && Date.now() < lockDate;
+    } else if (unlockDate > lockDate) {
+      return Date.now() < lockDate;
+    } else {
+      return false;
+    }
+  };
   return (
     <div className={classes.main}>
-      {contract.unlockDate > contract.lockDate ? (
+      {canWithdraw() ? (
         <>
           <h2>Withdrawal closes in:</h2>
           <Countdown
@@ -53,7 +65,7 @@ const Deposit = (props) => {
         <CustomButton text="Buy HUCHA" variant="secondary" />
         {/* <CustomButton text="Unstake" variant="secondary" /> */}
       </div>
-      <FormDeposit />
+      <FormDeposit canWithdraw={canWithdraw} />
     </div>
   );
 };
