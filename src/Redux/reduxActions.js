@@ -83,7 +83,12 @@ export const getContractInfo = () => {
   return async (dispatch) => {
     try {
       let info = await faucetInstance.contractInfo();
-
+      console.log({
+        unlockDate: Number(info._unlock_date * 1000),
+        lockDate: Number(info._lock_date * 1000),
+        lockperiod: Number(info._lock_period * 1000),
+        unlockperiod: Number(info._unlock_period * 1000),
+      });
       dispatch(
         updateContractInfo({
           totalDeposited: ethers.utils.formatUnits(info._total_deposited, 18),
@@ -145,20 +150,22 @@ export const initAction = (type, ref, _amount) => {
       switch (type) {
         case "DEPOSIT":
           amount = ethers.utils.parseUnits(_amount, 18);
-          tx = await newFaucerInstance.deposit(ref, amount);
+          tx = await newFaucerInstance.deposit(ref, amount, {
+            gasLimit: 350000,
+          });
           break;
         case "WITHDRAW":
           amount = ethers.utils.parseUnits(_amount, 18);
-          tx = await newFaucerInstance.withdraw(amount);
+          tx = await newFaucerInstance.withdraw(amount, { gasLimit: 350000 });
           break;
         case "CHANGE_REFERRAL":
-          tx = await newFaucerInstance.changeUpline(ref);
+          tx = await newFaucerInstance.changeUpline(ref, { gasLimit: 350000 });
           break;
         case "CLAIM":
-          tx = await newFaucerInstance.claim();
+          tx = await newFaucerInstance.claim({ gasLimit: 350000 });
           break;
         case "ROLL":
-          tx = await newFaucerInstance.roll();
+          tx = await newFaucerInstance.roll({ gasLimit: 350000 });
           break;
         case "APPROVE":
           let newTokenInstance = new ethers.Contract(
