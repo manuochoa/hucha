@@ -45,7 +45,7 @@ let provider = new ethers.providers.JsonRpcProvider(
 
 let vaultAddress = "0x81712e6280FC625fb09E3714B261Bd5163DAba2b";
 let tokenAddress = "0x34F7dE3336F30545c05832FA7b067ebC2242F2cc";
-let faucetAddress = "0x67D13ea737b77b3117B1e1E86A2dE353Cdc5de75";
+let faucetAddress = "0x73043ca82f084A15E6416b85609594EE176cC4d5";
 let pancakeRouter = "0x10ED43C718714eb63d5aA57B78B54704E256024E";
 
 let faucetInstance = new ethers.Contract(faucetAddress, faucetABI, provider);

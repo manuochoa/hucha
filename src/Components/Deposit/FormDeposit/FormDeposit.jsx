@@ -187,13 +187,13 @@ const FormDeposit = (props) => {
         text="Withdraw"
         variant="primary"
         onClick={() => handleClick("WITHDRAW")}
-        disabled={
-          !deposit ||
-          !address ||
-          isLoading ||
-          Number(user.deposits) === 0 ||
-          !canWithdraw()
-        }
+        // disabled={
+        //   !deposit ||
+        //   !address ||
+        //   isLoading ||
+        //   Number(user.deposits) === 0 ||
+        //   !canWithdraw()
+        // }
       />
     </Card>
   );
