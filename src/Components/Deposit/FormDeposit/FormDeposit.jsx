@@ -110,8 +110,6 @@ const FormDeposit = ({ canWithdraw }) => {
     if (user.myReferral !== "0x0000000000000000000000000000000000000000") {
       setAddress(user.myReferral);
     }
-
-    console.log(canWithdraw(), "canWithdraw");
   }, [user]);
 
   const material = useStyles();

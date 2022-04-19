@@ -83,12 +83,7 @@ export const getContractInfo = () => {
   return async (dispatch) => {
     try {
       let info = await faucetInstance.contractInfo();
-      console.log({
-        unlockDate: Number(info._unlock_date * 1000),
-        lockDate: Number(info._lock_date * 1000),
-        lockperiod: Number(info._lock_period * 1000),
-        unlockperiod: Number(info._unlock_period * 1000),
-      });
+
       dispatch(
         updateContractInfo({
           totalDeposited: ethers.utils.formatUnits(info._total_deposited, 18),
