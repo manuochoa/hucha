@@ -63,7 +63,8 @@ const FormDeposit = (props) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleDeposit = (e) => {
-    const number = Number(e.target.value.replace(/[^0-9]/g, ""));
+    // const number = Number(e.target.value.replace(/[^0-9]/g, ""));
+    const number = Number(e.target.value);
     if (number <= Number(user.balance)) {
       setDeposit(number);
     } else {
