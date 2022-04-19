@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import classes from "./Navbar.module.css";
-import logo from "../../../Assets/logo_small.svg";
+import logo from "../../../Assets/main_logo.svg";
 import CustomButton from "../../UI/Button/CustomButton";
 
 const Navbar = (props) => {
@@ -8,7 +8,7 @@ const Navbar = (props) => {
 
   return (
     <div className={classes.main}>
-      <img src={logo} alt="logo" />
+      <img className={classes.logo} src={logo} alt="logo" />
 
       <CustomButton
         onClick={

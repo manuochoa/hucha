@@ -1,23 +1,27 @@
 .main {
-    padding: 20px;
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background: transparent
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: transparent;
 }
 .main button {
-    width: fit-content;
-    padding: 14px 29px;
+  width: fit-content;
+  padding: 14px 29px;
+}
+.logo {
+  height: 70px;
+  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 350px) {
-    .main {
-        padding: 10px;
-    }
+  .main {
+    padding: 10px;
+  }
 }
