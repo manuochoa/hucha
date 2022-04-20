@@ -129,7 +129,7 @@ const FormDeposit = ({ canWithdraw }) => {
           </div>
           <div className={classes.header}>
             <label></label>
-            <label>
+            <label className={classes.onlyMobile}>
               Staked Amount: {truncateByDecimalPlace(user.deposits, 2)}
             </label>
           </div>
