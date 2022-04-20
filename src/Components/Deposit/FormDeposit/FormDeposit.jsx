@@ -127,6 +127,12 @@ const FormDeposit = ({ canWithdraw }) => {
             <label>Amount</label>
             <label>Balance: {truncateByDecimalPlace(user.balance, 2)}</label>
           </div>
+          <div className={classes.header}>
+            <label></label>
+            <label>
+              Staked Amount: {truncateByDecimalPlace(user.deposits, 2)}
+            </label>
+          </div>
           <TextField
             classes={material}
             placeholder="Value"
@@ -172,10 +178,19 @@ const FormDeposit = ({ canWithdraw }) => {
         style={{ marginBottom: "10px" }}
       />
       <CustomButton
-        text="Withdraw"
+        text={
+          Number(user.deposits) < Number(deposit)
+            ? "Not Enough Deposit"
+            : "Withdraw"
+        }
         variant="primary"
         onClick={() => handleClick("WITHDRAW")}
-        disabled={isLoading || Number(user.deposits) === 0 || !canWithdraw()}
+        disabled={
+          isLoading ||
+          Number(user.deposits) === 0 ||
+          !canWithdraw() ||
+          Number(user.deposits) < Number(deposit)
+        }
       />
     </Card>
   );
