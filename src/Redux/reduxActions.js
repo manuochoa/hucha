@@ -43,9 +43,9 @@ let provider = new ethers.providers.JsonRpcProvider(
   "https://data-seed-prebsc-2-s2.binance.org:8545/"
 );
 
-let vaultAddress = "0x81712e6280FC625fb09E3714B261Bd5163DAba2b";
+// let vaultAddress = "0x81712e6280FC625fb09E3714B261Bd5163DAba2b";
 let tokenAddress = "0x34F7dE3336F30545c05832FA7b067ebC2242F2cc";
-let faucetAddress = "0x1C61E4F24cbD9ACd789e98f1Fcc048eDC003977E";
+let faucetAddress = "0x7C00EB9E083f0bA7c241230f4C78481DB2919727";
 let pancakeRouter = "0x10ED43C718714eb63d5aA57B78B54704E256024E";
 
 let faucetInstance = new ethers.Contract(faucetAddress, faucetABI, provider);
