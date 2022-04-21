@@ -178,11 +178,7 @@ const FormDeposit = ({ canWithdraw }) => {
         style={{ marginBottom: "10px" }}
       />
       <CustomButton
-        text={
-          Number(user.deposits) < Number(deposit)
-            ? "Not Enough Deposit"
-            : "Withdraw"
-        }
+        text={"Withdraw"}
         variant="primary"
         onClick={() => handleClick("WITHDRAW")}
         disabled={
