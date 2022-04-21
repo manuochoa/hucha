@@ -145,6 +145,12 @@ export const initAction = (type, ref, _amount) => {
       switch (type) {
         case "DEPOSIT":
           amount = ethers.utils.parseUnits(_amount, 18);
+          let hasDeposit = await checkDeposit(ref);
+          if (!hasDeposit) {
+            return window.alert(
+              "Ref should be an address with active deposits"
+            );
+          }
           tx = await newFaucerInstance.deposit(ref, amount, {
             gasLimit: 350000,
           });
@@ -374,4 +380,14 @@ const getSigner = (walletType, provider) => {
       console.log(error, "signer");
     }
   };
+};
+
+export const checkDeposit = async (userAddress) => {
+  try {
+    let info = await faucetInstance.userInfo(userAddress);
+
+    return info.deposits > 0;
+  } catch (error) {
+    console.log(error, "checkDeposit");
+  }
 };
