@@ -133,7 +133,7 @@ export const initAction = (type, ref, _amount) => {
   return async (dispatch) => {
     try {
       let signer = store.getState().signer;
-      let newFaucerInstance = new ethers.Contract(
+      let newFaucetInstance = new ethers.Contract(
         faucetAddress,
         faucetABI,
         signer.signer
@@ -151,22 +151,22 @@ export const initAction = (type, ref, _amount) => {
               "Ref should be an address with active deposits"
             );
           }
-          tx = await newFaucerInstance.deposit(ref, amount, {
+          tx = await newFaucetInstance.deposit(ref, amount, {
             gasLimit: 350000,
           });
           break;
         case "WITHDRAW":
           amount = ethers.utils.parseUnits(_amount, 18);
-          tx = await newFaucerInstance.withdraw(amount, { gasLimit: 350000 });
+          tx = await newFaucetInstance.withdraw(amount, { gasLimit: 350000 });
           break;
         case "CHANGE_REFERRAL":
-          tx = await newFaucerInstance.changeUpline(ref, { gasLimit: 350000 });
+          tx = await newFaucetInstance.changeUpline(ref, { gasLimit: 350000 });
           break;
         case "CLAIM":
-          tx = await newFaucerInstance.claim({ gasLimit: 350000 });
+          tx = await newFaucetInstance.claim({ gasLimit: 350000 });
           break;
         case "ROLL":
-          tx = await newFaucerInstance.roll({ gasLimit: 350000 });
+          tx = await newFaucetInstance.roll({ gasLimit: 350000 });
           break;
         case "APPROVE":
           let newTokenInstance = new ethers.Contract(
@@ -209,6 +209,8 @@ export const connectMetamask = () => {
       });
 
       let userAddress = accounts[0];
+      dispatch(getUserInfo(userAddress));
+
       const id = await window.ethereum.request({
         method: "eth_chainId",
       });
@@ -221,7 +223,6 @@ export const connectMetamask = () => {
         })
       );
       dispatch(getSigner());
-      dispatch(getUserInfo(userAddress));
 
       window.ethereum.on("accountsChanged", function (accounts) {
         dispatch(
@@ -275,6 +276,7 @@ export const connectWalletConnect = () => {
       const web3 = new Web3(provider);
 
       const accounts = await web3.eth.getAccounts();
+      dispatch(getUserInfo(accounts[0]));
       let chainId = await web3.eth.getChainId();
 
       dispatch(
@@ -282,8 +284,6 @@ export const connectWalletConnect = () => {
           chainId,
         })
       );
-
-      dispatch(getUserInfo(accounts[0]));
 
       provider.on("accountsChanged", (accounts) => {
         console.log(accounts);
