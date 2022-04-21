@@ -67,7 +67,7 @@ const FormDeposit = ({ canWithdraw }) => {
     if (number <= Number(user.balance)) {
       setDeposit(number);
     } else {
-      setDeposit(user.balance);
+      setDeposit(Number(user.balance));
     }
   };
 
