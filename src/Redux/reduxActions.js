@@ -152,18 +152,18 @@ export const initAction = (type, ref, _amount) => {
             );
           }
           tx = await newFaucetInstance.deposit(ref, amount, {
-            gasLimit: 350000,
+            gasLimit: 600000,
           });
           break;
         case "WITHDRAW":
           amount = ethers.utils.parseUnits(_amount, 18);
-          tx = await newFaucetInstance.withdraw(amount, { gasLimit: 350000 });
+          tx = await newFaucetInstance.withdraw(amount, { gasLimit: 600000 });
           break;
         case "CHANGE_REFERRAL":
           tx = await newFaucetInstance.changeUpline(ref, { gasLimit: 350000 });
           break;
         case "CLAIM":
-          tx = await newFaucetInstance.claim({ gasLimit: 350000 });
+          tx = await newFaucetInstance.claim({ gasLimit: 500000 });
           break;
         case "ROLL":
           tx = await newFaucetInstance.roll({ gasLimit: 350000 });
