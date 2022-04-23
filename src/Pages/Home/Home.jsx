@@ -32,7 +32,7 @@ const Home = (props) => {
     referal_rewards: 0,
     team: 112,
     my_referal: "",
-    marketing_wallet: "0x153B202F6C6e570f13C27371CdA6Ae2c8768Dca6",
+    marketing_wallet: "0x593299A04cec407295352A89071CA6E49634e28b",
     total_deposited: 32120800,
     total_users: 11000,
   };

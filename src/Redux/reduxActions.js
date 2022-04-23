@@ -40,12 +40,12 @@ const updateUserInfo = (payload) => {
 };
 
 let provider = new ethers.providers.JsonRpcProvider(
-  "https://data-seed-prebsc-2-s2.binance.org:8545/"
+  "https://bsc-dataseed1.ninicoin.io/"
 );
 
-// let vaultAddress = "0x81712e6280FC625fb09E3714B261Bd5163DAba2b";
-let tokenAddress = "0x34F7dE3336F30545c05832FA7b067ebC2242F2cc";
-let faucetAddress = "0x4d39e6fB4a69f8495d519041219469B613271220";
+// let vaultAddress = "0x718041b011c3790297081bCAdA05a313e2EA1239";
+let tokenAddress = "0xc865A5938EdA8B5f6629A17fc066D74bB20Ab85d";
+let faucetAddress = "0x6557Cc09801F61101DAb184c580294f2E4846870";
 let pancakeRouter = "0x10ED43C718714eb63d5aA57B78B54704E256024E";
 
 let faucetInstance = new ethers.Contract(faucetAddress, faucetABI, provider);
@@ -260,12 +260,12 @@ export const connectWalletConnect = () => {
       console.log("hola");
       const provider = new WalletConnectProvider({
         rpc: {
-          // 56: "https://bsc-dataseed.binance.org/",
-          4: "https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
-          97: "https://data-seed-prebsc-1-s1.binance.org:8545/",
+          56: "https://bsc-dataseed1.ninicoin.io/",
+          // 4: "https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+          // 97: "https://data-seed-prebsc-1-s1.binance.org:8545/",
         },
         // network: "binance",
-        chainId: 4,
+        chainId: 56,
         infuraId: null,
       });
 
@@ -332,12 +332,12 @@ export const disconnectWallet = () => {
       if (connectionType === "WALLET_CONNECT") {
         const provider = new WalletConnectProvider({
           rpc: {
-            // 56: "https://bsc-dataseed1.ninicoin.io/",
-            4: "https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+            56: "https://bsc-dataseed1.ninicoin.io/",
+            // 4: "https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
 
-            97: "https://data-seed-prebsc-1-s1.binance.org:8545/",
+            // 97: "https://data-seed-prebsc-1-s1.binance.org:8545/",
           },
-          chainId: 4,
+          chainId: 56,
           infuraId: null,
         });
         await provider.disconnect();
